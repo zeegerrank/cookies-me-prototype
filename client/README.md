@@ -1,0 +1,4 @@
+tech used
+
+- tailwind
+- axios
