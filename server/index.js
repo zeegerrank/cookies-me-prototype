@@ -3,7 +3,7 @@ require("dotenv").config();
 /**express server */
 const express = require("express");
 const app = express();
-const port = 3500;
+const port = process.env.PORT || 3500;
 /**database */
 const { connectDb } = require("./db/connectDb");
 
@@ -15,7 +15,7 @@ const morgan = require("morgan");
 /**apply middleware here */
 app.use(cors());
 app.use(bodyParser.json());
-app.use(morgan("common"));
+app.use(morgan("dev"));
 
 /**connect db and listen to port */
 connectDb(
